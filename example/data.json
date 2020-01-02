@@ -1,0 +1,112 @@
+{
+  "success": true,
+  "data": {
+    "data": [
+      {
+        "callee": "[POST]/error",
+        "ok_rate": 0,
+        "failure_count": 54,
+        "SUM(qps)": 54,
+        "avg_rt_ms": 3.067870025,
+        "p95_rt_ms": 3.067870025,
+        "p99_rt_ms": 3.067870025,
+        "max_rt_ms": 56.1826
+      },
+      {
+        "callee": "v1.sys.upload",
+        "ok_rate": 0.959731543624161,
+        "failure_count": 54,
+        "SUM(qps)": 1341,
+        "avg_rt_ms": 206.13701661678832,
+        "p95_rt_ms": 211.80467152919707,
+        "p99_rt_ms": 211.80467152919707,
+        "max_rt_ms": 965.415804
+      },
+      {
+        "callee": "v2.sys.expFlagValue",
+        "ok_rate": 0.9999152567856079,
+        "failure_count": 31,
+        "SUM(qps)": 365811,
+        "avg_rt_ms": 8.628080784552846,
+        "p95_rt_ms": 13.525043630081301,
+        "p99_rt_ms": 16.850059542682928,
+        "max_rt_ms": 1238.72892
+      },
+      {
+        "callee": "v2.sys.expFlag",
+        "ok_rate": 0.9999562018220042,
+        "failure_count": 5,
+        "SUM(qps)": 114160,
+        "avg_rt_ms": 5.674799815053764,
+        "p95_rt_ms": 10.73497361075269,
+        "p99_rt_ms": 10.73497361075269,
+        "max_rt_ms": 332.520174
+      }
+    ],
+    "columns": [
+      {
+        "name": "callee",
+        "type": "STRING",
+        "is_date": false,
+        "is_dim": true,
+        "is_sample_weight_field": false
+      },
+      {
+        "name": "ok_rate",
+        "agg": "sum",
+        "type": "FLOAT",
+        "is_date": false,
+        "is_dim": false,
+        "is_sample_weight_field": false
+      },
+      {
+        "name": "failure_count",
+        "agg": "sum",
+        "type": "INT",
+        "is_date": false,
+        "is_dim": false,
+        "is_sample_weight_field": false
+      },
+      {
+        "name": "SUM(qps)",
+        "agg": "sum",
+        "type": "INT",
+        "is_date": false,
+        "is_dim": false,
+        "is_sample_weight_field": false
+      },
+      {
+        "name": "avg_rt_ms",
+        "agg": "sum",
+        "type": "FLOAT",
+        "is_date": false,
+        "is_dim": false,
+        "is_sample_weight_field": false
+      },
+      {
+        "name": "p95_rt_ms",
+        "agg": "sum",
+        "type": "FLOAT",
+        "is_date": false,
+        "is_dim": false,
+        "is_sample_weight_field": false
+      },
+      {
+        "name": "p99_rt_ms",
+        "agg": "sum",
+        "type": "FLOAT",
+        "is_date": false,
+        "is_dim": false,
+        "is_sample_weight_field": false
+      },
+      {
+        "name": "max_rt_ms",
+        "agg": "sum",
+        "type": "FLOAT",
+        "is_date": false,
+        "is_dim": false,
+        "is_sample_weight_field": false
+      }
+    ]
+  }
+}

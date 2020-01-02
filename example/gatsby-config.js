@@ -1,3 +1,12 @@
+// Site configuration options
 module.exports = {
-  plugins: [{ resolve: `gatsby-theme-minimal`, options: {} }],
+  // plugins are Node.js packages that implement Gatsby APIs. The config file accepts an array of plugins.
+  plugins: [
+    {
+      resolve: `gatsby-theme-chartable`,
+      options: {
+        dataSource: []
+      }
+    }
+  ]
 }
