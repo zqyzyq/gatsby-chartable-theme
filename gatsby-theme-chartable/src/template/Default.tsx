@@ -5,10 +5,10 @@ interface Props {
   data: object
 }
 
-export class Default extends React.Component {
-  constructor(props: Props) {
+export default class Default extends React.Component {
+  constructor(props: any) {
     super(props)
-    console.log(props)
+    console.log('构造默认主题页:', props)
   }
 
   render() {

@@ -10,16 +10,25 @@ exports.sourceNodes = async ({ actions }) => {
 
   //   data.forEach(datum => createNode(processDatum(datum)))
   let today = new Date()
-  let yesterday = new Date().setDate(today.getDate() - 1)
-  data.data.data.map((datum, idx) => {
-    console.log(datum)
-    createNode({
-      id: idx.toString(),
-      internal: {
-        type: 'json',
-        contentDigest: 'ok rate metrics'
-      },
-      ...datum
-    })
+  let yesterday = new Date(today.setDate(today.getDate() - 1))
+  console.log(yesterday.toISOString())
+  let yy = yesterday.getFullYear()
+  let mm = yesterday.getMonth() + 1
+  let dd = yesterday.getDate()
+  let originData = data.data.data
+
+  createNode({
+    id: 'RestAPI服务质量日表',
+    internal: {
+      type: 'chartableInput',
+      contentDigest: '符合chartable格式的数据'
+    },
+    componentSortedList: [
+      {
+        component: 'Scatter',
+        args: {}
+      }
+    ],
+    date: `${yy}-${mm}-${dd}`
   })
 }
