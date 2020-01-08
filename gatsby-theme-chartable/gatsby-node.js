@@ -1,17 +1,17 @@
 const path = require('path')
 
 /**
- * 这里是构造页面的职责和逻辑实现，不关心数据来源，但要为每一组数据创建一个页面。
+ * 这里是构造页面的职责和逻辑实现，不关心数据来源，但要为每一组数据以组件为最小单位拼装页面。
  *
- * 以组件为最小单位拼装页面，支持定义组件顺序和大小比例。
+ * 支持定义组件顺序和大小比例。
  * [
  *   {
- *      Title,
- *      ComponentSortedList: [{
- *        Component,
- *        Args: {...}
+ *      title,
+ *      componentSortedList: [{
+ *        component,
+ *        args: {...}
  *      }...]
- *      QueryTimestamp,
+ *      queryTimestamp,
  *   }
  * ]
  * Gatsby创建web页面的API
@@ -29,6 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
           componentSortedList {
             component
           }
+          title
           date
         }
       }
@@ -39,17 +40,29 @@ exports.createPages = async ({ graphql, actions }) => {
     return
   }
 
-  console.log('Creating pages...................')
-
   const {
     allChartableInput: { nodes: pages }
   } = result.data
 
   pages.map((page, idx) => {
-    console.log(`${page.id}`)
+    console.log(`http://localhost:8000/${page.title}/${page.date}`)
     createPage({
       component: template,
-      path: `/ok-rate?type=${page.id}&date=`
+      path: `/${page.title}/${page.date}`,
+      context: {
+        id: page.id
+      }
     })
+  })
+}
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      // It's important to have 'node_modules' in resolve module,
+      // otherwise the webpack resolve won't be able to find dependencies
+      // correctly.
+      modules: ['node_modules']
+    }
   })
 }

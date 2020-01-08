@@ -16,9 +16,10 @@ exports.sourceNodes = async ({ actions }) => {
   let mm = yesterday.getMonth() + 1
   let dd = yesterday.getDate()
   let originData = data.data.data
+  let title = 'RestAPI服务质量日表'
 
   createNode({
-    id: 'RestAPI服务质量日表',
+    id: `${title}@${yy}-${mm}-${dd}`,
     internal: {
       type: 'chartableInput',
       contentDigest: '符合chartable格式的数据'
@@ -29,6 +30,7 @@ exports.sourceNodes = async ({ actions }) => {
         args: {}
       }
     ],
+    title: title,
     date: `${yy}-${mm}-${dd}`
   })
 }
