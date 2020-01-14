@@ -2784,6 +2784,11 @@ core-js@^3.4.2:
   resolved "http://npm.devops.xiaohongshu.com:7001/core-js/download/core-js-3.6.2.tgz#2799ea1a59050f0acf50dfe89b916d6503b16caa"
   integrity sha1-J5nqGlkFDwrPUN/om5FtZQOxbKo=
 
+core-js@^3.6.4:
+  version "3.6.4"
+  resolved "http://npm.devops.xiaohongshu.com:7001/core-js/download/core-js-3.6.4.tgz#440a83536b458114b9cb2ac1580ba377dc470647"
+  integrity sha1-RAqDU2tFgRS5yyrBWAujd9xHBkc=
+
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "http://npm.devops.xiaohongshu.com:7001/core-util-is/download/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -4677,7 +4682,7 @@ gatsby-telemetry@^1.1.46:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby@^2.18.17, gatsby@^2.18.8:
+gatsby@^2.18.8:
   version "2.18.17"
   resolved "http://npm.devops.xiaohongshu.com:7001/gatsby/download/gatsby-2.18.17.tgz#43fb4c092b09e76cc9137cfc20c67ba7fdcd755d"
   integrity sha1-Q/tMCSsJ52zJE3z8IMZ7p/3NdV0=
@@ -10712,6 +10717,11 @@ yargs@^13.2.4:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^13.1.1"
+
+yarn@^1.21.1:
+  version "1.21.1"
+  resolved "http://npm.devops.xiaohongshu.com:7001/yarn/download/yarn-1.21.1.tgz#1d5da01a9a03492dc4a5957befc1fd12da83d89c"
+  integrity sha1-HV2gGpoDSS3EpZV778H9EtqD2Jw=
 
 yeast@0.1.2:
   version "0.1.2"

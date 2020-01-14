@@ -8,8 +8,6 @@
   },
   "dependencies": {
     "gatsby": "^2.18.8",
-    "gatsby-theme-chartable": "^1.0.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "gatsby-theme-chartable": "^1.0.0"
   }
 }

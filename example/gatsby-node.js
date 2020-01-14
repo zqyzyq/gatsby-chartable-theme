@@ -27,7 +27,9 @@ exports.sourceNodes = async ({ actions }) => {
     componentSortedList: [
       {
         component: 'Scatter',
-        args: {}
+        args: {
+          width: 600
+        }
       }
     ],
     title: title,
