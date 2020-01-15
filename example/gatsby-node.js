@@ -28,7 +28,7 @@ exports.sourceNodes = async ({ actions }) => {
       {
         component: 'Scatter',
         args: {
-          width: 600
+          data: data.data.data
         }
       }
     ],

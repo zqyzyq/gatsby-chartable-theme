@@ -26,9 +26,6 @@ exports.createPages = async ({ graphql, actions }) => {
       allChartableInput {
         nodes {
           id
-          componentSortedList {
-            component
-          }
           title
           date
         }

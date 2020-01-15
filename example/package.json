@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "gatsby": "^2.18.8",
+    "gatsby-plugin-no-javascript": "^2.0.5",
     "gatsby-theme-chartable": "^1.0.0"
   }
 }

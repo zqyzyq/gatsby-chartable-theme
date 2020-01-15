@@ -30,9 +30,9 @@ export default class Default extends React.Component<Props> {
     const { componentSortedList: components, title, date } = this.props.data.chartableInput
 
     const componentDOM = components.map(({ component: componentName, args }, idx) => {
-      console.log('Render component with', args)
       switch (componentName) {
         case 'Scatter':
+          console.log('Render scatter with', args)
           return <Scatter args={args} key={idx.toString()} />
       }
     })
@@ -40,7 +40,7 @@ export default class Default extends React.Component<Props> {
     return (
       <React.Fragment>
         {/* <div className={style.header}>{title}</div> */}
-        {componentDOM}
+        <div className={style.content}>{componentDOM}</div>
       </React.Fragment>
     )
   }
@@ -51,6 +51,14 @@ export const pageQuery = graphql`
     chartableInput(id: { eq: $id }) {
       componentSortedList {
         component
+        args {
+          data {
+            ok_rate
+            failure_count
+            SUM_qps_
+            callee
+          }
+        }
       }
       title
       date
