@@ -1,4 +1,6 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
 
 /**
  * 这里是构造页面的职责和逻辑实现，不关心数据来源，但要为每一组数据以组件为最小单位拼装页面。
@@ -70,5 +72,11 @@ exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
       // correctly.
       modules: ['node_modules']
     }
+    // plugins: [
+    //   new HtmlWebpackPlugin({
+    //     inlineSource: '.(js|css)$' // embed all javascript and css inline
+    //   }),
+    //   new HtmlWebpackInlineSourcePlugin()
+    // ]
   })
 }

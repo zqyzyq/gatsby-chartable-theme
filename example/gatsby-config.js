@@ -7,7 +7,6 @@ module.exports = {
       options: {
         dataSource: []
       }
-    },
-    'gatsby-plugin-no-javascript'
+    }
   ]
 }
